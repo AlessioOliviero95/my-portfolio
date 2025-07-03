@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="system">
           <Navbar />
-          <main className="container mx-auto px-4 py-10">{children}</main>
+          <main className="container mx-auto px-4">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
