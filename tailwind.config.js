@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        navbar: "oklch(var(--navbar))",
         accent: {
           DEFAULT: "hsl(190, 64%, 52%)",         // qui il colore che vuoi
           foreground: "hsl(700, 40%, 98%)",      // colore testo su accent

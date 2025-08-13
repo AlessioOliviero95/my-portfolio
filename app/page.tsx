@@ -7,11 +7,11 @@ import ContactSection from "./components/ContactMeSection";
 
 export default function HomePage() {
   return (
-    <>
-      <HeroSection />
+    <div className="px-4 max-w-4xl space-y-6 mx-auto">
+      <HeroSection/>
       <ProjectsSection />
       <AboutSection />
       <ContactSection />
-    </>
+    </div>
   );
 }

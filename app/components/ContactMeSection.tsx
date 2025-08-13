@@ -36,19 +36,23 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 md:px-12 max-w-xl mx-auto text-center space-y-6">
-      <h2 className="text-3xl md:text-4xl font-bold">Contact Me</h2>
-      <p className="text-muted-foreground">Send me a message and I’ll get back to you soon.</p>
+    <section
+      id="contact"
+      className="max-w-xl mx-auto space-y-6 md:h-dvh flex flex-col items-start md:items-center justify-center text-left"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-center">Contact Me</h2>
+      <p className="text-muted-foreground text-center">Send me a message and I’ll get back to you soon.</p>
 
-      <form ref={form} onSubmit={sendEmail} className="space-y-4 text-left">
+      <form ref={form} onSubmit={sendEmail} className="space-y-4 w-full">
         <Input name="user_name" placeholder="Your name" required />
         <Input type="email" name="user_email" placeholder="Your email" required />
         <Textarea name="message" placeholder="Your message..." rows={5} required />
         <Button type="submit" disabled={loading} className="w-full">
           {loading ? "Sending..." : "Send Message"}
         </Button>
-        {sent && <p className="text-green-500 text-sm mt-2">Message sent successfully! ✅</p>}
+        {sent && <p className="text-green-500 text-sm mt-2 text-center">Message sent successfully! ✅</p>}
       </form>
+      <div className="px-4" />
     </section>
   );
 }
